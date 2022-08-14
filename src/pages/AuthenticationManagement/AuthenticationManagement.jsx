@@ -12,7 +12,7 @@ export default class MainDashboard extends Component {
     <div className style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} >
         <br/>
     <div className="col-md-8 mt-4 mx-auto">
-        <h1 className="text-center" >  Authentication Management </h1> 
+        <h1 className="text-center" style={{color:"navajowhite", }}> <b> Authentication Management </b></h1>
         <br/>
 
         <form onSubmit = { this.onSubmit } className="needs-validation" noValidate style={{backgroundColor: "#c0cdce"}}>

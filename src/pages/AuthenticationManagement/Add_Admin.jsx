@@ -34,7 +34,7 @@ function Add_Admin() {
 
     console.log("value", values);
     try {
-      const result = await request.post("CommonSignup", values);
+      const result = await request.post("http://localhost:8000/CommonSignup", values);
       console.log("api call sign up admin result ", result);
           swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
               .then((value) => {
@@ -48,16 +48,7 @@ function Add_Admin() {
 
   // Demo
   const [form] = Form.useForm();
-  const onFill = () => { form.setFieldsValue({ 
-    name: 'Gimhani', 
-    name1: 'Hettiarachchi', 
-    nic: '263150569V',
-    email: 'gimhani@gmail.com',
-    number: '0776549756',
-    inputpw: '12345',
-    confirm: '12345',
-    gender: 'Female',
-  }); };
+
 
   const [value] = React.useState(1);
 
@@ -114,8 +105,8 @@ function Add_Admin() {
               ]}
             >
               <Radio.Group value={value}>
-                <Radio value={"Male"}>Male</Radio>
-                <Radio value={"Female"}>Female</Radio>
+                <Radio style={{color:"grey"}} value={"Male"}>Male</Radio>
+                <Radio style={{color:"grey"}} value={"Female"}>Female</Radio>
               </Radio.Group>
             </Form.Item>
             <Form.Item
@@ -219,7 +210,7 @@ function Add_Admin() {
               &nbsp;
               <Button href="/AuthenticationManagement" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button>
               <br/>
-              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary"  style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>

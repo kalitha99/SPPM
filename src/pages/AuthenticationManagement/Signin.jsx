@@ -17,7 +17,7 @@ function Signin() {
   const onFinish = async (values) => {
     console.log("Received values of form: ", values);
     try {
-      const result = await request.post("login", values);
+      const result = await request.post("http://localhost:8000/login", values);
       if (result.status === 200) {
         await updateToken(result.data.data.token);
         decodeToken(result.data.data.token);

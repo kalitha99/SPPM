@@ -51,6 +51,9 @@ function Header() {
               <a href="/AboutUs">
                 About
               </a>
+              <a href="/Products">
+                Products
+            </a>
               <a href="/ContactUs">
                 Contact Us
               </a>
@@ -85,6 +88,9 @@ function Header() {
               <a href="/AboutUs">
                 About
               </a>
+              <a href="/Products">
+                Products
+              </a>
               <a href="/ContactUs">
                 Contact Us
               </a>
@@ -109,21 +115,10 @@ function Header() {
               <a href="/AdminDashboard">
                 Home
               </a>
-              <a href="/Notice">
-                Notice
+              <a href="/Products">
+                Products
               </a>
-              <a href="/AdminUploads">
-                Resources
-              </a>
-              <a href="/AboutUs">
-                About
-              </a>
-              <a href="/ContactUs">
-                Contact Us
-              </a>
-              <a href="#">
-                My Profile
-              </a>
+
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
           </div>

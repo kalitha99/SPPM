@@ -36,13 +36,13 @@ export const RequestContextProvider = props => {
       return axios.create({
         baseURL,
         timeout: 10000,
-        headers: { Authorization: `Bearer ${token}` }
+        headers: { 'x-access-token': token }
       });
     } else {
       return axios.create({
         baseURL,
         timeout: 10000,
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        headers: { 'x-access-token': localStorage.getItem("token") }
       });
     }
     return axios.create({

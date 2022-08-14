@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from "antd";
 import "./Dashboard.css"
-import background from "../images/slide_img05.jpg";
+import background from "../images/background2.jpg";
 import image1 from "../images/image1.jpg";
 import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
@@ -11,12 +11,12 @@ export default class MainDashboard extends Component {
 
   render() {
     return (
-      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+      <div style={{ height:"700px", backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       
 
     <div className='page'>
     <div><br/>
-    <h1 className="text-center">Admin Dashboard</h1>
+    <h1 className="text-center" style={{color:"white"}}>Admin Dashboard</h1>
 
 <div class="py-3">
     <div class="container">
@@ -39,36 +39,36 @@ export default class MainDashboard extends Component {
              <div class="card-block" ><br/>
              <img  style={{height: 130, width: 180}} class="rounded-circle" src={image2} alt="Card image cap"/>
                <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/" style={{ textDecoration: 'none', color: 'Info' }}>
-               Notice Management </a>
+               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Add_product" style={{ textDecoration: 'none', color: 'Info' }}>
+               Add product </a>
                </Button>
              </div>
            </div>
          </div>
 {/* 03 */}
-<div class="col-md-3" >
-           <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
-             <div class="card-block" ><br/>
-             <img  style={{height: 130, width: 180}} class="rounded-circle" src={image3} alt="Card image cap"/>
-               <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Resources" style={{ textDecoration: 'none', color: 'Info' }}>
-                   File Uploads </a>
-               </Button>
-             </div>
-           </div>
-         </div>
+{/*<div class="col-md-3" >*/}
+{/*           <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>*/}
+{/*             <div class="card-block" ><br/>*/}
+{/*             <img  style={{height: 130, width: 180}} class="rounded-circle" src={image3} alt="Card image cap"/>*/}
+{/*               <h4 class="card-title"></h4>                */}
+{/*               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/Resources" style={{ textDecoration: 'none', color: 'Info' }}>*/}
+{/*                   File Uploads </a>*/}
+{/*               </Button>*/}
+{/*             </div>*/}
+{/*           </div>*/}
+{/*         </div>*/}
 {/* 04 */}
-          <div class="col-md-3" >
-           <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>
-             <div class="card-block" ><br/>
-             <img  style={{height: 130, width: 180}} class="rounded-circle" src={image4} alt="Card image cap"/>
-               <h4 class="card-title"></h4>                
-               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/marking" style={{ textDecoration: 'none', color: 'Info' }}>
-                   Marking Scheme Creating </a>
-               </Button>
-             </div>
-           </div>
-         </div>
+{/*          <div class="col-md-3" >*/}
+{/*           <div class="card text-center" style = {{backgroundColor:'#e5e3e3'}}>*/}
+{/*             <div class="card-block" ><br/>*/}
+{/*             <img  style={{height: 130, width: 180}} class="rounded-circle" src={image4} alt="Card image cap"/>*/}
+{/*               <h4 class="card-title"></h4>                */}
+{/*               <Button class="btn btn btn-outline-light, hidden-md-up" ><a href="/marking" style={{ textDecoration: 'none', color: 'Info' }}>*/}
+{/*                   Marking Scheme Creating </a>*/}
+{/*               </Button>*/}
+{/*             </div>*/}
+{/*           </div>*/}
+{/*         </div>*/}
 
       </div><br/>
 {/* 05 */}

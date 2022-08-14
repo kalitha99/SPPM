@@ -114,8 +114,8 @@ function Add_Customer() {
               ]}
             >
               <Radio.Group value={value}>
-                <Radio value={"Male"}>Male</Radio>
-                <Radio value={"Female"}>Female</Radio>
+                <Radio style={{color:"grey"}} value={"Male"}>Male</Radio>
+                <Radio style={{color:"grey"}} value={"Female"}>Female</Radio>
               </Radio.Group>
             </Form.Item>
             <Form.Item

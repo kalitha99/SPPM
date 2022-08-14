@@ -34,7 +34,7 @@ function Add_Customer() {
 
     console.log("value", values);
     try {
-      const result = await request.post("CommonSignup", values);
+      const result = await request.post("http://localhost:8000/CommonSignup", values);
       console.log("api call sign up customer result ", result);
           swal({ text: "Successfully Created", icon: "success", button: "Okay!"})
               .then((value) => {
@@ -48,16 +48,6 @@ function Add_Customer() {
   
   // Demo
   const [form] = Form.useForm();
-  const onFill = () => { form.setFieldsValue({ 
-    name: 'Kasun', 
-    name1: 'Perera', 
-    nic: '785639638V',
-    email: 'kasun@gmail.com',
-    number: '0717653459',
-    inputpw: '12345',
-    confirm: '12345',
-    gender: 'Male',
-  }); };
 
   const [value] = React.useState(1);
 
@@ -220,7 +210,7 @@ function Add_Customer() {
               &nbsp;
               <Button href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button> 
               <br/>
-              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFill} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
+              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFinish} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
             </Form.Item>
           </Form>
         </div>
