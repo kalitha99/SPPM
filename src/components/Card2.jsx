@@ -3,7 +3,7 @@ import './Card.css'
 import {Button, message} from "antd";
 import useRequest from "../services/RequestContext";
 
-const VCard = forwardRef(({ item }, ref) => {
+const VCard2 = forwardRef(({ item }, ref) => {
 
     const {request} = useRequest();
 
@@ -43,12 +43,11 @@ const VCard = forwardRef(({ item }, ref) => {
 
                                                 <img  className="card-img-top img-fluid"
                                                       src={`http://localhost:8000/${item?.filePath}`}
-                                                     style={{height: '190px', width:'190px', marginTop: '-23px'}}/>
+                                                     style={{height: '80px', width:'80px', marginTop: '-23px'}}/>
                                                 <div className="card-body text-center">
-                                                    <h4 className="card-title" class="text-danger"> {item.name} </h4>
-                                                    <h5 className="card-title">{item.name}</h5>
+                                                    <h4 className="card-title" class="text-danger"> {item.prod_name} </h4>
                                                     <p className="card-text">Rs. {item.sellingPrice}</p>
-                                                    <Button onClick={onClick} > Add to cart </Button>
+                                                    <Button onClick={onClick} > Remove </Button>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,4 +61,4 @@ const VCard = forwardRef(({ item }, ref) => {
 
     )
 })
-export default VCard
+export default VCard2

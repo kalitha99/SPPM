@@ -41,13 +41,7 @@ function Header() {
               <a href="/">
                 Home
               </a>
-              <NavDropdown id="nav-dropdown-dark-example" title="Menu" menuVariant="dark">
-                  <NavDropdown.Item href="/"><img  style={{height: 30, width: 30}} class="rounded-circle" src={img1} />&nbsp;&nbsp; Action </NavDropdown.Item>
-                  <NavDropdown.Item href="/"><img  style={{height: 30, width: 30}} class="rounded-circle" src={img2} />&nbsp;&nbsp; Another action </NavDropdown.Item>
-                  <NavDropdown.Item href="/"><img  style={{height: 30, width: 30}} class="rounded-circle" src={img3} />&nbsp;&nbsp; Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/"><img  style={{height: 30, width: 30}} class="rounded-circle" src={img4} />&nbsp;&nbsp; Separated link </NavDropdown.Item>
-              </NavDropdown>
+             
               <a href="/AboutUs">
                 About
               </a>
@@ -78,13 +72,7 @@ function Header() {
               <a href="/">
                 Home
               </a>
-              <NavDropdown id="nav-dropdown-dark-example" title="Menu" menuVariant="dark">
-                  <NavDropdown.Item href="/"> Action </NavDropdown.Item>
-                  <NavDropdown.Item href="/"> Another action </NavDropdown.Item>
-                  <NavDropdown.Item href="/">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/"> Separated link </NavDropdown.Item>
-              </NavDropdown>
+
               <a href="/AboutUs">
                 About
               </a>
@@ -96,6 +84,9 @@ function Header() {
               </a>
               <a href="/Profile">
                 My Profile
+              </a>
+              <a href="/Cart">
+                Cart
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -117,6 +108,9 @@ function Header() {
               </a>
               <a href="/Products">
                 Products
+              </a>
+              <a href="/Cart">
+                Cart
               </a>
 
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>

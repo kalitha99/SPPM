@@ -24,8 +24,12 @@ import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import Add_Product from "./pages/AuthenticationManagement/AddProdcut";
 import Products from "./components/products";
+import Cart from "./pages/Cart";
+import CheckOut from "./components/Checkout";
+import {Elements} from "@stripe/react-stripe-js";
+import {loadStripe} from "@stripe/stripe-js";
 
-
+const promise = loadStripe('pk_test_51KWFYGDXB1RTaY3BZ6ZYHWXfYCTB9T9cGoMiQDPLqC7EvLGtLuXIK1ZRYpErh2lXtryUKaDs0dkJ8mOqxovNKIuN00KRNNuk9v')
 export default class App extends Component {
     render() {
         return (
@@ -51,6 +55,12 @@ export default class App extends Component {
                             <Route path="/AdminDashboard" exact component={AdminDashboard}/>
                             <Route path="/AboutUs" exact component={AboutUs}/>
                             <Route path="/ContactUs" exact component={ContactUs}/>
+                            <Route path="/Cart" exact component={Cart}/>
+                            <Route exact path="/CheckOut" >
+                                <Elements stripe={promise}>
+                                    <CheckOut/>
+                                </Elements>
+                            </Route>
 
                             <Footer/>
                         </div>

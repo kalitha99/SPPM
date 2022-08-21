@@ -123,7 +123,7 @@ function Stdprofile() {
 
         <div className="form-profile">
 
-          <h3>COURSE WEB</h3>
+          <h3>Universal Computers </h3>
           <h1>User Profile</h1>
 
           {data && (

@@ -10,6 +10,7 @@ import useUser from "../../services/UserContext";
 import { useHistory } from "react-router-dom";
 
 function Signin() {
+  const email = 'email';
   const { request, updateToken } = useRequest();
   const { decodeToken, user, setUser } = useUser();
   const history = useHistory();
@@ -21,8 +22,10 @@ function Signin() {
       if (result.status === 200) {
         await updateToken(result.data.data.token);
         decodeToken(result.data.data.token);
+        sessionStorage.setItem(email, result.data.data.email);
         message.success(result.data.message);
-        history.push("/Home2");
+
+        history.push("/");
         window.location.reload(true);
       } else {
         message.error(result.data.message);

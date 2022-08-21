@@ -47,6 +47,7 @@ function Add_Product() {
         formDat.append("dateOfArrival", values.dateOfArrival)
         formDat.append("addedBy", values.addedBy)
         formDat.append("quantity", values.quantity)
+        formDat.append("category", values.category)
         try {
             const result = await request.post("http://localhost:8000/product/addProduct", formDat);
             console.log("api call sign up customer result ", result);
@@ -116,6 +117,17 @@ function Add_Product() {
                             <Form.Item
                                 name={["quantity"]}
                                 label="Product quantity"
+                                rules={[
+                                    {
+                                        required: true,
+                                    },
+                                ]}
+                            >
+                                <Input allowClear/>
+                            </Form.Item>
+                            <Form.Item
+                                name={["category"]}
+                                label="Product category"
                                 rules={[
                                     {
                                         required: true,
