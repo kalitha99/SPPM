@@ -109,20 +109,15 @@ function Add_Customer() {
               </Radio.Group>
             </Form.Item>
             <Form.Item
-              name={["nic"]}
-              label="NIC"
+              name={["address"]}
+              label="address"
               rules={[
                 {
                   required: true,
-                },
-                {
-                  max: 12,
-                  min: 10,
-                  message: "NIC is not valid",
-                },
+                }
               ]}
             >
-              <Input />
+              <Input.TextArea  />
             </Form.Item>
             <Form.Item
               name={["email"]}
@@ -210,7 +205,7 @@ function Add_Customer() {
               &nbsp;
               <Button href="/login" type="button" class="btn btn-outline-secondary" style={{marginLeft:"0px"}} > Cancel </Button> 
               <br/>
-              <Button type="button" htmlType="button" class="btn btn-outline-secondary" onClick={onFinish} style={{marginLeft:"40px", marginTop:"10px"}}>Demo</Button>
+
             </Form.Item>
           </Form>
         </div>

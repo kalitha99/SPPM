@@ -11,6 +11,8 @@ import Add_Product from "../pages/AuthenticationManagement/AddProdcut";
 import {message, Row} from "antd";
 import useRequest from "../services/RequestContext";
 import VCard from "./Card";
+import './Home1.css'
+import Footer from "./Footer";
 
 function Home1() {
     const {request} = useRequest();
@@ -83,17 +85,20 @@ function Home1() {
             </div>
 
             <div className="container">
-                <div className="row hidden-md-up">
-                    {products?.map((item) => (
-                        <VCard key={item.id} item={item}/>
-                    ))}
+                <div className="home_container">
+                    <div className="home_row">
+                        {products?.map((item) => (
+                            <VCard key={item.id} item={item}/>
+                        ))}
+                    </div>
                 </div>
             </div>
             <br/>
             <Video/>
 
-
+            <Footer/>
         </div>
+
     )
 
 }

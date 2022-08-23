@@ -45,8 +45,9 @@ function Header() {
               <a href="/AboutUs">
                 About
               </a>
-              <a href="/Products">
-                Products
+
+              <a href="/Predictor">
+                Predictor
             </a>
               <a href="/ContactUs">
                 Contact Us
@@ -79,6 +80,9 @@ function Header() {
               <a href="/Products">
                 Products
               </a>
+              <a href="/Predictor">
+                Predictor
+              </a>
               <a href="/ContactUs">
                 Contact Us
               </a>
@@ -87,6 +91,9 @@ function Header() {
               </a>
               <a href="/Cart">
                 Cart
+              </a>
+              <a href="/ViewOrders">
+                Orders
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>
@@ -100,17 +107,20 @@ function Header() {
         <div className="conatiner">
           <div className="header">
             <AdminSlider />
-            <a href="/AdminDashboard"><img src={logo} alt="logo" className="logo" /></a>
+            <a href="/"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">
-              <a href="/AdminDashboard">
+              <a href="/">
                 Home
               </a>
-              <a href="/Products">
-                Products
+              <a href="/Add_product">
+                Add Products
               </a>
-              <a href="/Cart">
-                Cart
+              <a href="/orders-admin">
+                View Orders
+              </a>
+              <a href="/Predictor">
+                Predictor
               </a>
 
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>

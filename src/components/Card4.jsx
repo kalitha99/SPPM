@@ -3,7 +3,7 @@ import './Card.css'
 import {Button, message} from "antd";
 import useRequest from "../services/RequestContext";
 
-const VCard3 = forwardRef(({ item }, ref) => {
+const VCard4 = forwardRef(({ item }, ref) => {
 
 
     return (
@@ -17,14 +17,11 @@ const VCard3 = forwardRef(({ item }, ref) => {
                     <small>Rs</small>
                     <strong>{item.sellingPrice}</strong>
                 </p>
-                <p className="checkoutProduct__price">
 
-                    <strong>Order is {item.status}</strong>
-                </p>
             </div>
             <hr/>
         </div>
 
     )
 })
-export default VCard3
+export default VCard4

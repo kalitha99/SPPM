@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, Col, Form, Input, message, Row, Select} from "antd";
 import useRequest from "../services/RequestContext";
 import VCard from "./Card";
+import './product.css'
 
 const Products = () => {
     const {Option} = Select;
@@ -70,13 +71,16 @@ const Products = () => {
 
             <br/>
             <div className="container">
+
                 <div className="row hidden-md-up">
+
                     {products?.map((item) => (
                         <VCard key={item.id} item={item}/>
                     ))}
+
                 </div>
+                <br/>
             </div>
-            <br/>
         </div>
     );
 };

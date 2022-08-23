@@ -153,6 +153,12 @@ function Stdprofile() {
               >
                 <Input />
               </Form.Item>
+              <Form.Item
+                name={["address"]}
+                label="address"
+              >
+                <Input.TextArea />
+              </Form.Item>
 
               <Form.Item
                 name={["number"]}
@@ -189,6 +195,7 @@ function Stdprofile() {
 
             </Form>
           )}
+
         </div>
       </div>
     </div>

@@ -28,6 +28,12 @@ import Cart from "./pages/Cart";
 import CheckOut from "./components/Checkout";
 import {Elements} from "@stripe/react-stripe-js";
 import {loadStripe} from "@stripe/stripe-js";
+import ViewOrders from "./components/veiwOrders";
+import MyComponent from "./components/viewOrdersAdmin";
+import AdminOreders from "./components/viewOrdersAdmin";
+import deleteProducts from "./components/deleteProducts";
+import DeleteProducts from "./components/deleteProducts";
+import Predictor from "./components/predictor";
 
 const promise = loadStripe('pk_test_51KWFYGDXB1RTaY3BZ6ZYHWXfYCTB9T9cGoMiQDPLqC7EvLGtLuXIK1ZRYpErh2lXtryUKaDs0dkJ8mOqxovNKIuN00KRNNuk9v')
 export default class App extends Component {
@@ -40,7 +46,6 @@ export default class App extends Component {
                         <div style={{backgroundColor: "#ffff", margin: "0"}}>
 
                             <Route path="/" exact component={Home1}/>
-                            <Route path="/Home2" exact component={Home2}/>
                             <Route path="/login" exact component={Signin}/>
                             <Route path="/Profile" exact component={Profile}/>
                             <Route path="/Products" exact component={Products}/>
@@ -56,13 +61,17 @@ export default class App extends Component {
                             <Route path="/AboutUs" exact component={AboutUs}/>
                             <Route path="/ContactUs" exact component={ContactUs}/>
                             <Route path="/Cart" exact component={Cart}/>
+                            <Route path="/ViewOrders" exact component={ViewOrders}/>
+                            <Route path="/orders-admin" exact component={AdminOreders}/>
+                            <Route path="/DeleteProduct" exact component={DeleteProducts}/>
+                            <Route path="/Predictor" exact component={Predictor}/>
                             <Route exact path="/CheckOut" >
                                 <Elements stripe={promise}>
                                     <CheckOut/>
                                 </Elements>
                             </Route>
 
-                            <Footer/>
+
                         </div>
                     </BrowserRouter>
                 </UserContextProvider>

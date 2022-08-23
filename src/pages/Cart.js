@@ -5,6 +5,7 @@ import VCard from "../components/Card";
 import CurrencyFormat from "react-currency-format";
 import './cart.css'
 import VCard2 from "../components/Card2";
+import {Link} from "react-router-dom";
 
 const Cart = () => {
     let sub = 0;
@@ -16,11 +17,14 @@ const Cart = () => {
 
         async function getProd() {
             try {
-                const email = {email: sessionStorage.email}
+                const email = {
+                    email: sessionStorage.email,
+                    type: 'cart'
+                }
                 let result = await request.post("http://localhost:8000/cart/getCart", email);
-                setProducts(result.data?.cart.cartItems)
+                setProducts(result.data?.cart)
 
-                    console.log(subTot)
+                console.log(subTot)
 
 
             } catch (error) {
@@ -33,12 +37,13 @@ const Cart = () => {
     }, []);
 
     useEffect(() => {
-        {products?.map((item) => (
-            sub = parseInt(sub) + parseInt(item.sellingPrice)
-        ))}
+        {
+            products?.map((item) => (
+                sub = parseInt(sub) + parseInt(item.sellingPrice)
+            ))
+        }
         setSubTot(sub)
     }, [products]);
-
 
 
     return (
@@ -53,14 +58,14 @@ const Cart = () => {
                         <div>
                             <Row>
 
-                                <Col span={8}>
-                                    <h4>Hello, {sessionStorage.email} </h4>
-                                    <h4 className="checkout__title">Your shopping Basket</h4> <br/>
+                                <Col span={20}>
+                                    <h5>Hello, {sessionStorage.email} </h5>
+                                    <h5 className="checkout__title">Your shopping Cart</h5> <br/>
                                 </Col>
 
 
                             </Row>
-
+                            <hr/>
 
                             <div className="container">
                                 <div className="row hidden-md-up">
@@ -75,27 +80,27 @@ const Cart = () => {
 
                     <div className="checkout__right">
 
-                                <div className="subtotal">
+                        <div className="subtotal">
 
-                                    <CurrencyFormat
-                                        renderText={(value) => (
-                                            <>
+                            <CurrencyFormat
+                                renderText={(value) => (
+                                    <>
 
-                                                <p>
-                                                    Subtotal Rs. {subTot} .00
-                                                </p>
+                                        <p>
+                                            Subtotal Rs. {subTot} .00
+                                        </p>
 
-                                            </>
-                                        )}
-                                        decimalScale={2}
-                                        //value={getBasketTotal(basket)}
-                                        displayType={"text"}
-                                        thousandSeparator={true}
-                                        prefix={"$"}
-                                    />
+                                    </>
+                                )}
+                                decimalScale={2}
+                                //value={getBasketTotal(basket)}
+                                displayType={"text"}
+                                thousandSeparator={true}
+                                prefix={"$"}
+                            />
 
-                                    <button ><a href="/CheckOut">Proceed to Checkout</a></button>
-                                </div>
+                            <button><Link to={'\CheckOut'}>Proceed to Checkout</Link></button>
+                        </div>
 
                     </div>
                 </div>

@@ -2,10 +2,13 @@ import React, { forwardRef } from 'react'
 import './Card.css'
 import {Button, message} from "antd";
 import useRequest from "../services/RequestContext";
+import {useHistory} from "react-router-dom";
 
 const VCard2 = forwardRef(({ item }, ref) => {
 
     const {request} = useRequest();
+    const history = useHistory();
+
 
     async function addToCart() {
         try {
@@ -31,32 +34,42 @@ const VCard2 = forwardRef(({ item }, ref) => {
         addToCart()
     }
 
+
+    async function deleteitemk(param) {
+        try {
+
+            let result = await request.post("http://localhost:8000/cart/deleteItem", param);
+            console.log(result.data)
+            message.success(result.data.msg);
+            history.replace('/Cart')
+
+        } catch (error) {
+            console.log(" error ", error);
+            message.error(error.message);
+        }
+    }
+
+    function deleteOnClick(param) {
+        deleteitemk(param).then(window.location.reload(false))
+    }
+
     return (
-
-                    <div class="col-md-3">
-                        <div className='card-container'>
-                            <div className="image-container">
-                                <div style={{marginTop: '5px'}}>
-                                    <a href="/">
-                                        <div class="card text-center" style={{backgroundColor: '#dddddd'}}>
-                                            <div class="card-block"><br/>
-
-                                                <img  className="card-img-top img-fluid"
-                                                      src={`http://localhost:8000/${item?.filePath}`}
-                                                     style={{height: '80px', width:'80px', marginTop: '-23px'}}/>
-                                                <div className="card-body text-center">
-                                                    <h4 className="card-title" class="text-danger"> {item.prod_name} </h4>
-                                                    <p className="card-text">Rs. {item.sellingPrice}</p>
-                                                    <Button onClick={onClick} > Remove </Button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <br/>
-                    </div>
+        <div className="CheckoutProduct">
+            <img className="checkoutProduct__image" src={`http://localhost:8000/${item?.filePath}`} alt="" />
+            <div className="checkoutProduct__info">
+                <p className="checkoutProduct__title">{item.prod_name}</p>
+                <p className="checkoutProduct__price">
+                    <small>Rs.</small>
+                    <strong>{item.sellingPrice}</strong>
+                </p>
+                <button onClick={(e) => {
+                    e.preventDefault();
+                    deleteOnClick({
+                        id: item._id,
+                    })
+                }}>Remove from Basket</button>
+            </div>
+        </div>
 
 
     )

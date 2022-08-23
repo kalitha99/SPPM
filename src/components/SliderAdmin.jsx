@@ -48,7 +48,6 @@ function Slider() {
                   <> 
                   <li key={key} className={item.className}>
                     <Link to={item.path}>
-                      {item.icon}
                       <span>{item.title}</span>
                     </Link>
                   </li>
