@@ -41,9 +41,9 @@ function Predictor() {
         console.log("value", values);
         try {
             const result = await request.post("http://localhost:5000/", values);
-            let val=result
+            let val=result.data.prediction
             setPredValue(val)
-            console.log (predValue)
+            console.log (result)
         } catch (e) {
             console.log("post create customer error ", e);
         }
@@ -209,7 +209,7 @@ function Predictor() {
 
                             {predValue ?
                                 <>
-                                   <h3> Predicted value : <br/>Rs. {predValue}.00</h3>
+                                  <h3> Predicted value : <br/>Rs. {predValue}.00 </h3>
                                 </> : ""}
                         </Form>
                     </div>
