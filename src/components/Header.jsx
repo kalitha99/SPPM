@@ -13,6 +13,7 @@ import img2 from '../images/slide_img02.jpg';
 import img3 from '../images/slide_img03.jpg';
 import img4 from '../images/slide_img04.jpg';
 import img5 from '../images/slide_img05.jpg';
+import SliderUser from "./SliderUser";
 
 function Header() {
   const { user } = useUser();
@@ -35,25 +36,21 @@ function Header() {
       <>
         <div className="conatiner"> {/* ----------------------- When there is no login opportunity */}
           <div className="header">
+            <SliderUser/>
           <a href="/"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">
               <a href="/">
                 Home
               </a>
-             
+              <a href="/Products">
+                Products
+              </a>
               <a href="/AboutUs">
                 About
               </a>
-
-              <a href="/Predictor">
-                Predictor
-            </a>
               <a href="/ContactUs">
                 Contact Us
-              </a>
-              <a href="/login">
-                My Profile
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Login/Sign up</button>
             </ul>
@@ -66,13 +63,10 @@ function Header() {
       <>
         <div className="conatiner">
           <div className="header">
-            
+            <SliderUser/>
             <a href="/"><img src={logo} alt="logo" className="logo" /></a>
 
             <ul className="pages">
-              <a href="/">
-                Home
-              </a>
 
               <a href="/AboutUs">
                 About
@@ -80,20 +74,11 @@ function Header() {
               <a href="/Products">
                 Products
               </a>
-              <a href="/Predictor">
-                Predictor
-              </a>
               <a href="/ContactUs">
                 Contact Us
               </a>
-              <a href="/Profile">
-                My Profile
-              </a>
               <a href="/Cart">
                 Cart
-              </a>
-              <a href="/ViewOrders">
-                Orders
               </a>
               <button type="button" class="btn btn-outline-secondary" onClick={logout} style={{marginLeft:"50px",backgroundColor:"transparent", border:"none"}}><AiOutlineLogin />&nbsp; Logout</button>
             </ul>

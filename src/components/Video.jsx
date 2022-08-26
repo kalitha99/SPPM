@@ -7,7 +7,7 @@ export default class video extends Component {
         <div className="text-center">
 
 
-            <video autoPlay loop muted id='video'>
+            <video autoPlay loop muted id='video' style={{ width: "100%", height: "auto" }}>
                 <source src={Background } type='video/mp4' />
             </video>
       </div>

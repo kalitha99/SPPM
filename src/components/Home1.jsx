@@ -86,7 +86,7 @@ function Home1() {
 
             <div className="container">
                 <div className="home_container">
-                    <div className="home_row">
+                    <div className="row hidden-md-up">
                         {products?.map((item) => (
                             <VCard key={item.id} item={item}/>
                         ))}
@@ -96,7 +96,7 @@ function Home1() {
             <br/>
             <Video/>
 
-            <Footer/>
+
         </div>
 
     )

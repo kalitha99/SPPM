@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Form, Input, Button, DatePicker, Radio, Upload} from "antd";
+import {Form, Input, Button, DatePicker, Radio, Upload, Select, Col} from "antd";
 import "./stylesSignup.css";
 import "antd/dist/antd.css";
 import swal from 'sweetalert';
@@ -10,6 +10,8 @@ import useUser from "../../services/UserContext";
 
 
 function Add_Product() {
+
+    const {Option} = Select;
     const {user} = useUser();
     const {request} = useRequest();
     const [imgae, setImgae] = useState([]);
@@ -126,15 +128,26 @@ function Add_Product() {
                                 <Input allowClear/>
                             </Form.Item>
                             <Form.Item
-                                name={["category"]}
-                                label="Product category"
-                                rules={[
-                                    {
-                                        required: true,
-                                    },
-                                ]}
+                                name={"category"}
+                                label="Category"
                             >
-                                <Input allowClear/>
+                                <Select
+                                    allowClear
+                                >
+                                    <Option value=''>All</Option>
+                                    <Option value="pc">PC</Option>
+                                    <Option value="MONITORS">MONITORS</Option>
+                                    <Option value="LAPTOPS">LAPTOPS</Option>
+                                    <Option value="CONSOLE GAMING">CONSOLE GAMING</Option>
+                                    <Option value="MOTHERBOARDS">MOTHERBOARDS</Option>
+                                    <Option value="MEMORY(RAM)">MEMORY(RAM)</Option>
+                                    <Option value="PROCESSORS">PROCESSORS</Option>
+                                    <Option value="GRAPHIC CARDS">GRAPHIC CARDS</Option>
+                                    <Option value="COOLING AND LIGHTING">COOLING AND LIGHTING</Option>
+                                    <Option value="POWER SUPPLY, UPS & SURGE PROTECTORS">POWER SUPPLY, UPS & SURGE PROTECTORS</Option>
+                                    <Option value="KEYBOARDS, MICE & GAMEPADS">KEYBOARDS, MICE & GAMEPADS</Option>
+                                    <Option value="SPEAKERS & HEADPHONES">SPEAKERS & HEADPHONES</Option>
+                                </Select>
                             </Form.Item>
                             <Form.Item
                                 name={["dateOfArrival"]}

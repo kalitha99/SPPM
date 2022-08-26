@@ -24,3 +24,15 @@
     width: 190px;
     height: 75px;
 }
+
+@media (max-width: 880px) {
+    .pages {
+        float: none;
+        display: none;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
