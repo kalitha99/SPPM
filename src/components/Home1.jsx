@@ -38,11 +38,11 @@ function Home1() {
     console.log(products)
 
     return (
-        <div>
+        <div className="main_home">
 
 
             {/* Create home page slide show */}
-            <div style={{marginTop: "10px", marginRight: "10px", marginLeft: "10px", marginBottom: "10px"}}>
+            <div style={{}}>
 
                 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">

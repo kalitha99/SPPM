@@ -60,7 +60,7 @@ const VCard = forwardRef(({item}, ref) => {
                             <strong>{item.sellingPrice}</strong>
                         </p>
                         <div className="product__disc">
-                            //description
+
                         </div>
                     </div>
                     <br/>

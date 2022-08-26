@@ -3,7 +3,7 @@ import {Button, Col, Form, Input, message, Row, Select} from "antd";
 import useRequest from "../services/RequestContext";
 import VCard from "./Card";
 import './product.css'
-
+import footer from './Footer'
 const Products = () => {
     const {Option} = Select;
     const {request} = useRequest();
@@ -32,7 +32,7 @@ const Products = () => {
     }, []);
 
     return (
-        <div>
+        <div className="Product-main">
 
             <Form
                 layout="vertical"
@@ -51,8 +51,17 @@ const Products = () => {
                             >
                                 <Option value=''>All</Option>
                                 <Option value="pc">PC</Option>
-                                <Option value="monitor">monitor</Option>
-
+                                <Option value="MONITORS">MONITORS</Option>
+                                <Option value="LAPTOPS">LAPTOPS</Option>
+                                <Option value="CONSOLE GAMING">CONSOLE GAMING</Option>
+                                <Option value="MOTHERBOARDS">MOTHERBOARDS</Option>
+                                <Option value="MEMORY(RAM)">MEMORY(RAM)</Option>
+                                <Option value="PROCESSORS">PROCESSORS</Option>
+                                <Option value="GRAPHIC CARDS">GRAPHIC CARDS</Option>
+                                <Option value="COOLING AND LIGHTING">COOLING AND LIGHTING</Option>
+                                <Option value="POWER SUPPLY, UPS & SURGE PROTECTORS">POWER SUPPLY, UPS & SURGE PROTECTORS</Option>
+                                <Option value="KEYBOARDS, MICE & GAMEPADS">KEYBOARDS, MICE & GAMEPADS</Option>
+                                <Option value="SPEAKERS & HEADPHONES">SPEAKERS & HEADPHONES</Option>
                             </Select>
                         </Form.Item>
                     </Col>
@@ -80,7 +89,9 @@ const Products = () => {
 
                 </div>
                 <br/>
+                <footer/>
             </div>
+
         </div>
     );
 };

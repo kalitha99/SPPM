@@ -11,6 +11,7 @@
     "antd": "^4.21.5",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0-beta1",
+    "google-maps-react": "^2.0.6",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.25",
     "jwt-decode": "^3.1.2",
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "google-map-react": "^2.2.0"
   }
 }

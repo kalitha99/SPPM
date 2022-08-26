@@ -1,3 +1,7 @@
+.Product-main{
+    background-image: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg");
+    height: 300vh;
+}
 .product {
     display: flex;
     flex-direction: column;
@@ -50,3 +54,4 @@
 .home_container{
     padding-top: 20px;
 }
+
