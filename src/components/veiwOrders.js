@@ -46,11 +46,13 @@ const ViewOrders = () => {
 
     return (
         <div>
-            <div className='orders'>
-                <h1>Your Orders</h1>
+            <div className='orders' >
+                <h1 style={{color: "white"}}>Your Orders</h1>
 
-                <div className="order">
-                    <h2>Order</h2>
+                <div className="order" style={{color: "white"}}>
+                   <br/>
+                   <br/>
+                   <br/>
                     {/*<p>{moment.unix(item.orederdOn).format("MMMM Do YYYY, h:mma")}</p>*/}
 
 
@@ -58,9 +60,9 @@ const ViewOrders = () => {
                         <VCard3 key={item.id} item={item}/>
                     ))}
 
-                    <CurrencyFormat
+                    <CurrencyFormat style={{color: "white"}}
                         renderText={(value) => (
-                            <h3 className="order__total">Order Total: {value}</h3>
+                            <h3 style={{color: "white"}} className="order__total">Order Total: {value}</h3>
                         )}
                         decimalScale={2}
                         value={subTot}

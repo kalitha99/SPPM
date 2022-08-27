@@ -27,13 +27,17 @@
     border: 1px solid;
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
+    color: #ffffe6;
 }
+
 .checkout {
+    background: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
     display: flex;
     padding: 20px;
-    background-color: white;
     height: max-content;
+
 }
 
 .checkout__ad {
@@ -45,4 +49,24 @@
     margin-right: 10px;
     padding: 10px;
     border-bottom: 1px solid lightgray;
+}
+
+.cart {
+    background: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.checkout__right {
+    background: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.subtotal {
+    background: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg") no-repeat;
+    background-size: cover;
+    color: #ffffe6;
 }

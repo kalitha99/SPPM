@@ -15,7 +15,10 @@ const DeleteProducts = () => {
 
     async function getProd() {
         try {
-            let values={category:''}
+            let values = {
+                category: '',
+                id: ""
+            }
             let result = await request.post("http://localhost:8000/product/searchProducts", values);
             setProducts(result.data?.Products)
 
@@ -31,18 +34,16 @@ const DeleteProducts = () => {
     useEffect(() => {
 
 
-
         getProd()
     }, []);
 
 
-
-
     function deleteFunc(Data) {
         let data = {
-            id:Data.id,
-            status:'canceled'
+            id: Data.id,
+            status: 'canceled'
         }
+
         async function deletprod(data) {
             try {
                 const email = {
@@ -56,6 +57,7 @@ const DeleteProducts = () => {
                 message.error(error.message);
             }
         }
+
         deletprod(data)
         getProd()
     }

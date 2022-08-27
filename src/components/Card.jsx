@@ -2,6 +2,8 @@ import React, {forwardRef} from 'react'
 import './Card.css'
 import {Button, message} from "antd";
 import useRequest from "../services/RequestContext";
+import {Link} from "react-router-dom";
+import SingleProduct from "./SingleProductView";
 
 const VCard = forwardRef(({item}, ref) => {
 
@@ -70,7 +72,8 @@ const VCard = forwardRef(({item}, ref) => {
                     <img src={`http://localhost:8000/${item?.filePath}`}
                          style={{height: '190px', width: '190px', marginTop: '-23px'}} alt=""/>
 
-                    <button onClick={onClick}>Add to Cart</button>
+
+                    <button><Link to={`/SingleProduct/${item._id}`}>Veiw details</Link></button>
 
                 </div>
             </div>

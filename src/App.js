@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route,useParams} from "react-router-dom";
 import {RequestContextProvider} from "./services/RequestContext";
 import {UserContextProvider} from "./services/UserContext";
 
@@ -34,6 +34,7 @@ import AdminOreders from "./components/viewOrdersAdmin";
 import deleteProducts from "./components/deleteProducts";
 import DeleteProducts from "./components/deleteProducts";
 import Predictor from "./components/predictor";
+import SingleProduct from "./components/SingleProductView";
 
 const promise = loadStripe('pk_test_51KWFYGDXB1RTaY3BZ6ZYHWXfYCTB9T9cGoMiQDPLqC7EvLGtLuXIK1ZRYpErh2lXtryUKaDs0dkJ8mOqxovNKIuN00KRNNuk9v')
 export default class App extends Component {
@@ -65,6 +66,7 @@ export default class App extends Component {
                             <Route path="/orders-admin" exact component={AdminOreders}/>
                             <Route path="/DeleteProduct" exact component={DeleteProducts}/>
                             <Route path="/Predictor" exact component={Predictor}/>
+                            <Route path="/SingleProduct/:prod" exact component={SingleProduct}/>
                             <Route exact path="/CheckOut" >
                                 <Elements stripe={promise}>
                                     <CheckOut/>

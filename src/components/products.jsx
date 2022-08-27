@@ -13,7 +13,12 @@ const Products = () => {
     async function getProd(values) {
         try {
 
-            let result = await request.post("http://localhost:8000/product/searchProducts", values);
+            const Values = {
+                category: values.category,
+                id:""
+            }
+
+            let result = await request.post("http://localhost:8000/product/searchProducts", Values);
             setProducts(result.data?.Products)
 
         } catch (error) {
@@ -25,7 +30,8 @@ const Products = () => {
     useEffect(() => {
         productForm.setFieldsValue({category: ""});
         const values = {
-            category: ""
+            category: "",
+            id:""
         }
         getProd(values)
 

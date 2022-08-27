@@ -57,17 +57,17 @@ const VCard2 = forwardRef(({ item }, ref) => {
         <div className="CheckoutProduct">
             <img className="checkoutProduct__image" src={`http://localhost:8000/${item?.filePath}`} alt="" />
             <div className="checkoutProduct__info">
-                <p className="checkoutProduct__title">{item.prod_name}</p>
-                <p className="checkoutProduct__price">
+                <p className="checkoutProduct__title" style={{color: "white"}}>{item.prod_name}</p>
+                <p className="checkoutProduct__price" style={{color: "white"}}>
                     <small>Rs.</small>
                     <strong>{item.sellingPrice}</strong>
                 </p>
-                <button onClick={(e) => {
+                <Button type="primary" danger={true} onClick={(e) => {
                     e.preventDefault();
                     deleteOnClick({
                         id: item._id,
                     })
-                }}>Remove from Basket</button>
+                }}>Remove from Basket</Button>
             </div>
         </div>
 

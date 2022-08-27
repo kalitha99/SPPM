@@ -48,7 +48,7 @@ const Cart = () => {
 
     return (
 
-        <div>
+        <div className={"cart"}>
 
             <div>
                 <div className="checkout">
@@ -56,11 +56,11 @@ const Cart = () => {
 
 
                         <div>
-                            <Row>
+                            <Row >
 
-                                <Col span={20}>
-                                    <h5>Hello, {sessionStorage.email} </h5>
-                                    <h5 className="checkout__title">Your shopping Cart</h5> <br/>
+                                <Col span={20} >
+                                    <h5 style={{color: "white"}}>Hello, {sessionStorage.email} </h5>
+                                    <h5 className="checkout__title" style={{color: "white"}}>Your shopping Cart</h5> <br/>
                                 </Col>
 
 

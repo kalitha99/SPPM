@@ -55,3 +55,34 @@
     padding-top: 20px;
 }
 
+.productFull{
+    background: url("https://cdn.wallpapersafari.com/57/52/fixmWP.jpg") no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.details > h6{
+
+    align-items: center;
+    text-align: center;
+}
+
+.productFull > Button {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
